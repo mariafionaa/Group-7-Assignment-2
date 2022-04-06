@@ -1,0 +1,32 @@
+{% extends "base.html" %} */
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block content %} 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>َRegistration</title>
+  <link rel="stylesheet" href="regis.css">
+</head>
+<body>
+
+<form class="box" action="index.html" method="post">
+  <h1>Registration</h1>
+  <input type="text" name="" placeholder="Name">
+  <input type="text" name="" placeholder="Username">
+  <input type="password" name="" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}">
+  <input type="submit" name="" value="Registration">
+</form>
+
+</body>
+</html>
+
+{% for message in get_flashed_messages() %}
+<div>{{ message }}</div>
+{% endfor %}
+
+{% endblock %}
